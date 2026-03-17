@@ -1,0 +1,272 @@
+.main {
+  min-height: 100vh;
+  background-color: #050505;
+  padding-bottom: 60px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.sectionHeader p {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+}
+
+/* Pre-built Section */
+.preBuiltSection {
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 2rem;
+}
+
+.preBuiltGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.preBuiltCard {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s;
+}
+.preBuiltCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.pbImage {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.pbInfo {
+  padding: 24px;
+}
+
+.pbInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.pbSpecs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.specBadge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.pbPricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+}
+
+.discountPrice {
+  color: #10b981;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+  color: var(--text-dim);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+.divider span {
+  padding: 0 20px;
+}
+
+/* Builder Section */
+.builderSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.builderLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+@media (max-width: 900px) {
+  .builderLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.previewContainer {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(147, 51, 234, 0.1) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.canvasWrapper {
+  flex: 1;
+  min-height: 400px;
+  cursor: grab;
+}
+.canvasWrapper:active {
+  cursor: grabbing;
+}
+
+.previewStats {
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPrice {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+}
+.totalPrice span {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.selectionContainer {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryTabs {
+  display: flex;
+  overflow-x: auto;
+  padding: 16px;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0,0,0,0.3);
+}
+
+.categoryTabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabBtn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-dim);
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.tabBtn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.activeTab {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.partsList {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.partItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.partItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.selectedPart {
+  border-color: var(--secondary);
+  background: rgba(244, 63, 94, 0.1);
+}
+
+.partInfo h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+}
+
+.partDesc {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.partPrice {
+  font-weight: bold;
+  color: #10b981;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  margin-left: 16px;
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-dim);
+}

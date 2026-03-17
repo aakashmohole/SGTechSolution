@@ -1,0 +1,66 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 450px;
+  padding: 48px;
+  text-align: center;
+}
+
+.loginCard h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.inputGroup input {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+}
+
+.inputGroup input:focus {
+  border-color: var(--accent);
+}
+
+.errorMessage {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: -10px;
+}
+
+@media (max-width: 480px) {
+  .loginCard {
+    padding: 32px 24px;
+  }
+}

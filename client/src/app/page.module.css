@@ -1,0 +1,358 @@
+.main {
+  min-height: 100vh;
+  position: relative;
+  background-color: #050505;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 2rem;
+  background: radial-gradient(circle at center, rgba(147, 51, 234, 0.1) 0%, transparent 60%);
+}
+
+.heroCenter {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroCenter h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.heroCenter p {
+  font-size: 1.25rem;
+  color: var(--text-dim);
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--primary);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-10px) translateX(-50%); }
+  60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+.hardwareSection, .categorySection {
+  padding: 100px 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categorySection {
+  padding-bottom: 40px;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.categoryCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.catIcon {
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.categoryCard h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.categoryCard p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.sectionHeader p {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 60px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--secondary);
+}
+
+.category {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.statusInStock {
+  font-size: 0.8rem;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.statusOutOfStock {
+  font-size: 0.8rem;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.viewMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.viewMoreBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.offersSection {
+  padding: 100px 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offerBanner {
+  padding: 80px 40px;
+  border-radius: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(244, 63, 94, 0.2);
+  color: var(--secondary);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.offerContent h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.offerContent p {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Custom PC Build Section */
+.customBuildSection {
+  padding: 100px 4rem 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.customBuildBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(20,20,20,0.8) 0%, rgba(30,30,30,0.8) 100%);
+  gap: 40px;
+}
+
+.customBuildContent {
+  flex: 1;
+  max-width: 500px;
+}
+
+.customBuildContent h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.customBuildContent p {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.customBuildImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholderRig {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(147, 51, 234, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed rgba(147, 51, 234, 0.3);
+  box-shadow: 0 0 40px rgba(147, 51, 234, 0.2);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 2rem 40px;
+    height: auto;
+  }
+  
+  .heroActions {
+    justify-content: center;
+  }
+
+  
+  .hardwareSection, .offersSection, .categorySection, .customBuildSection {
+    padding: 60px 2rem;
+  }
+  
+  .offerContent h3 {
+    font-size: 2rem;
+  }
+
+  .customBuildBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+}
